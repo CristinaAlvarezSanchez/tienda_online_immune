@@ -1,0 +1,61 @@
+@hostname = http://localhost
+@port = 3000
+@url = {{hostname}}:{{port}}
+
+###
+GET {{url}}/api/products
+
+###
+GET {{url}}/api/products/actives
+
+
+###
+GET {{url}}/api/products/63c5a6ca2b6c843e46283851
+
+
+###
+POST {{url}}/api/products
+Content-Type: application/json
+
+{
+    "name": "Iphone 15",
+    "description": "Pepinaco de movil",
+    "price": 1500,
+    "department": "informatica",
+    "stock": 3,
+    "available": true
+}
+
+
+###
+PUT {{url}}/api/products/63c5a6ca2b6c843e46283851
+Content-Type: application/json
+
+{
+    "stock": 15
+}
+
+###
+DELETE {{url}}/api/products/63c5a6ca2b6c843e46283851
+
+###
+GET {{url}}/api/users/
+
+###
+POST {{url}}/api/users/
+Content-Type: application/json
+
+{
+"username": "CrisAs",
+"email": "cris@no.com", 
+"password": 1234, 
+"age":30
+}
+
+###
+GET {{url}}/api/users/63c84a60af3b501b523de30a/cart/add/63c5a7762b6c843e46283856
+Content-Type: application/json
+
+###
+GET {{url}}/api/users/cart/63c84a60af3b501b523de30a
+Content-Type: application/json
